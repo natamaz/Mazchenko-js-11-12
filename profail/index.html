@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/template" id="test">
+    <div class="wrapper">
+        <h1><%=name%></h1>
+        <p class="photo">
+            <img src="<%=photo_url%>" alt="my profile photo">
+        </p>
+        <h3 id="work"><%=work%></h3>
+        <div class="learning_reasons">
+            <h3><%=learning_reasons%></h3>
+            <ul class="profile_list">
+                <% for ( var i = 0; i < reasons_list.length; i++ ) { %>
+                <li><%=reasons_list[i]%></li>
+                <% }; %>
+            </ul>
+        </div>
+        <div class="contacts">
+            <h3  id="contact_phone"><%=contact_phone%></h3>
+            <p id="phone_number"><%=phone_number%></p>
+            <h3 id="social_profile"><%=social_profile%></h3>
+            <p id="social_network">
+                <a href="<%=social_network%>"><%=facebook_url%></a>
+            </p>
+        </div>
+        <h3 id="feedback"><%=feedback_title%></h3>
+        <p><%=feedback%></p>
+    </div>
+
+</script>
+
+</body>
+</html>
